@@ -39,11 +39,11 @@ namespace WindowsFormsApp3
             //        textBox1.Text += "\r\n";
             //    }
 
-                
+
             //}
 
             //string codingon = "codingon";
-            //string[] a = "1 2 3".Split(' ');
+            string[] a = "1 + 2 + 3".Split(' ');
             //textBox1.Text += a[0] + "\r\n";
             //textBox1.Text += a[1] + "\r\n";
             //textBox1.Text += a[2] + "\r\n";
