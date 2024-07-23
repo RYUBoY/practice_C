@@ -23,7 +23,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            textBox1.Text += "\r\n배가고파요호우~\r\n";
+            
         }
     }
 }
