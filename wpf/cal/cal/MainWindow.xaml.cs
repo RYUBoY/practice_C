@@ -22,7 +22,7 @@ namespace cal
         string strNumber = "";
         List<string> list = new List<string>();
         double result = 0;
-        private history history = new history();
+        history history = new history();
 
         public MainWindow()
         {

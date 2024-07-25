@@ -1,0 +1,21 @@
+﻿<Window x:Class="data_grid_실습.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:data_grid_실습"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="GridList" HorizontalAlignment="Center" Height="358" Margin="0,66,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <!--<DataGridTextColumn Header="이름" Binding="{Binding name}" Width="130"/>
+                <DataGridTextColumn Header="나이" Binding="{Binding age}" Width="130"/>
+                <DataGridTextColumn Header="설명" Binding="{Binding etc}" Width="*"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="label" Content="File path" HorizontalAlignment="Left" Margin="168,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.093,0.086"/>
+        <Button Content="File Open" HorizontalAlignment="Left" Height="35" Margin="25,16,0,0" VerticalAlignment="Top" Width="119" Click="button_Click"/>
+        <Button Content="Get Data" HorizontalAlignment="Left" Height="35" Margin="664,16,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click_2"/>
+    </Grid>
+</Window>
