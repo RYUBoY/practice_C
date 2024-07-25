@@ -11,5 +11,6 @@
         <RadioButton x:Name="HelloButton" Content="Hello" HorizontalAlignment="Left" Height="19" Margin="224,198,0,0" VerticalAlignment="Top" Width="91" IsChecked="True"/>
         <RadioButton x:Name="GoodbyeButton" Content="Goodbye" HorizontalAlignment="Left" Height="19" Margin="485,198,0,0" VerticalAlignment="Top" Width="91" IsChecked="True"/>
         <Button Content="Display" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.084,-0.264" Height="32" Width="80" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="151" Margin="485,258,0,0" VerticalAlignment="Top" Width="162" Source="1.png" Stretch="Fill"/>
     </Grid>
 </Window>
