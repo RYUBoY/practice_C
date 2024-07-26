@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Center" Height="128" Margin="0,136,0,0" VerticalAlignment="Top" Width="271" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}"/>
+                        <ProgressBar Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Percent}"/>
+                        <Label Grid.Column="2" Content="{Binding Percent}" HorizontalAlignment="Left" Margin="100,-8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.736,0.156" Grid.ColumnSpan="2" Width="37"/>
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>
