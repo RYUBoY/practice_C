@@ -12,12 +12,15 @@
             <TabItem Header="TabI1">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="14*"/>
-                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="28*"/>
+                        <ColumnDefinition Width="29*"/>
                         <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="264*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="21*"/>
+                        <ColumnDefinition Width="21*"/>
+                        <ColumnDefinition Width="486*"/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Header="Option" Margin="16,114,44,141" Grid.ColumnSpan="3" Grid.Column="1">
+                    <GroupBox Header="Option" Margin="16,114,44,141" Grid.ColumnSpan="6" Grid.Column="1">
                         <Grid Height="138">
                             <RadioButton x:Name="RadioButton1" Content="RadioButton1" HorizontalAlignment="Left" Margin="139,41,0,0" VerticalAlignment="Top" GroupName="1" Checked="RadioButton1_Checked" Unchecked="RadioButton1_Unchecked"/>
                             <RadioButton x:Name="RadioButton2" Content="RadioButton2" HorizontalAlignment="Left" Margin="261,41,0,0" VerticalAlignment="Top" GroupName="1"/>
@@ -28,19 +31,25 @@
 
 
                     </GroupBox>
-                    <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="23,61,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
-                    <Slider HorizontalAlignment="Left" Height="17" Margin="93,306,0,0" VerticalAlignment="Top" Width="276" ValueChanged="Slider_ValueChanged" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Grid.Column="3"/>
-                    <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="212,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.107,0.452" Grid.Column="3"/>
+                    <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="23,61,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click" Grid.ColumnSpan="6" Grid.Column="1"/>
+                    <Slider HorizontalAlignment="Left" Height="17" Margin="51,306,0,0" VerticalAlignment="Top" Width="276" ValueChanged="Slider_ValueChanged" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Grid.Column="6"/>
+                    <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="170,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.107,0.452" Grid.Column="6"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Web Browser">
                 <Grid Background="#FFE5E5E5">
-                    <DockPanel Margin="0,62,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="267*"/>
+                    </Grid.ColumnDefinitions>
+                    <DockPanel Margin="0,62,0,0" Grid.ColumnSpan="3">
                         <wv2:WebView2 x:Name="web" Source="https://www.microsoft.com"/>
                     </DockPanel>
-                    <Button x:Name="web_button" Content="Button" HorizontalAlignment="Left" Height="17" Margin="0,10,0,0" VerticalAlignment="Top" Width="100" Click="web_button_Click" Background="{x:Null}"/>
-                    <TextBox x:Name="url" HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="25"/>
-                    <Button x:Name="Go" Content="Go" HorizontalAlignment="Left" Height="25" Margin="209,32,0,0" VerticalAlignment="Top" Width="71" Click="Go_Click"/>
+                    <Button x:Name="web_button" Content="Button" HorizontalAlignment="Left" Height="17" Margin="0,10,0,0" VerticalAlignment="Top" Width="100" Click="web_button_Click" Background="{x:Null}" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="url" HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="25" Grid.ColumnSpan="3"/>
+                    <Button x:Name="Go" Content="Go" HorizontalAlignment="Left" Height="25" Margin="149,32,0,0" VerticalAlignment="Top" Width="71" Click="Go_Click" Grid.Column="2"/>
+                    <DockPanel LastChildFill="False" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tab3">
