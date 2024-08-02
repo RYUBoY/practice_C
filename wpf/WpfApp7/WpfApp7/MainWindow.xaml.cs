@@ -10,6 +10,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Linq;
+using Microsoft.Data.Analysis;
+using ScottPlot.Plottables;
+using System.Diagnostics;
+using System.Threading;
 
 namespace WpfApp7
 {
@@ -34,10 +40,23 @@ namespace WpfApp7
         }
         public void chart1()
         {
-            double[] dataX = { 1, 2, 3, 4, 5 };
-            double[] dataY = { 1, 4, 9, 16, 25 };
-            WpfPlot1.Plot.Add.Scatter(dataX, dataY);
-            WpfPlot1.Refresh();
+            //StreamReader sr = new StreamReader(@"한국서부발전(주)_태양광 발전 현황_20230630.csv");
+            var dataPath = System.IO.Path.GetFullPath(@"한국서부발전(주)_태양광 발전 현황_20230630.csv");
+            var df = DataFrame.LoadCsv(dataPath);
+            var df_1 = df.Rows.Where(row => row["발전기명"].ToString().Contains("태양광1") == true).ToList();
+            List<int> list = new List<int>();
+            List<int> values = Enumerable.Range(1, 25).ToList();
+
+            for (int i = 3; i < df_1[0].Count(); i++)
+            {
+
+                list.Add(Convert.ToInt32(df_1[0][i]));
+                WpfPlot1.Plot.Add.Scatter(values, list);
+                myPlot.SavePng("demo{}.png", 400, 300);
+
+            }
+            
+           
         }
         public void chart2()
         {
